@@ -1,5 +1,6 @@
 import { ArrowUpRight, MapPin } from "lucide-react"
 import { isShown, site } from "@/content/site"
+import { TypedSubtitle } from "@/components/typed-subtitle"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -19,7 +20,12 @@ export function Hero() {
           <h1 className="mt-4 font-serif text-[clamp(3.4rem,9vw,6.6rem)] leading-[0.9] tracking-[-0.035em] text-balance">
             {site.name}
           </h1>
-          <p className="mt-5 text-lg font-medium sm:text-xl">{site.role}</p>
+          <p className="mt-5 font-mono text-lg font-medium sm:text-xl">
+            <span aria-hidden="true" className="text-muted-foreground">
+              {"> "}
+            </span>
+            <TypedSubtitle text={site.role} />
+          </p>
           {isShown(site.availability) ? (
             <p className="mt-2 text-sm text-copper">{site.availability}</p>
           ) : null}

@@ -205,3 +205,51 @@
     animation: none;
   }
 }
+
+.typed-line {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: calc(var(--chars) * 1ch);
+  }
+}
+
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .typed-line {
+    width: calc(var(--chars) * 1ch);
+    overflow: hidden;
+    border-right: 1px solid currentColor;
+    animation:
+      typing 1.15s steps(40, end) both,
+      caret 1s steps(1) infinite;
+  }
+}
+
+.game-dialog {
+  width: min(26rem, calc(100vw - 1.5rem));
+  max-height: calc(100dvh - 1.5rem);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.game-dialog::backdrop {
+  background: color-mix(in oklch, black 58%, transparent);
+}

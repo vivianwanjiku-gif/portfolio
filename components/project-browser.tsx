@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, Search } from "lucide-react"
 import { useMemo, useState } from "react"
+import { SectionLabel } from "@/components/section-label"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { formatUpdated } from "@/lib/format"
@@ -43,7 +44,7 @@ export function ProjectBrowser({ data }: { data: PortfolioData }) {
   return (
     <section id="projects" className="border-t border-border bg-muted/40">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="text-sm font-medium tracking-[0.16em] text-copper uppercase">Repositories</p>
+        <SectionLabel>projects</SectionLabel>
         <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">All projects</h2>
         <p className="mt-4 max-w-2xl text-muted-foreground">
           {data.source === "github"

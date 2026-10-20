@@ -11,6 +11,8 @@ Portfolio site for Vivian Wanjiku, a software developer in Nairobi. It reads her
 
 The repository list comes from `https://api.github.com/users/vivianwanjiku-gif/repos`. Responses are cached for about an hour. If GitHub is unavailable, the site uses the snapshot in `content/github-fallback.json`.
 
+The playground is a small terminal (`help`, `about`, `projects`, `skills`, `contact`, `game`, `clear`) and a game of Snake. Snake is loaded only when the dialog opens. The best score and the Konami code bonus stay in `localStorage` on that browser. The hero subtitle types itself unless the visitor has asked for reduced motion.
+
 ## Run locally
 
 ```bash

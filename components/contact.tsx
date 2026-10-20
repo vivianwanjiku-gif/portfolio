@@ -1,3 +1,4 @@
+import { SectionLabel } from "@/components/section-label"
 import { Mail, Phone } from "lucide-react"
 import { GithubMark } from "@/components/github-mark"
 import { site, isShown } from "@/content/site"
@@ -8,7 +9,7 @@ export function Contact() {
     <section id="contact" className="border-t border-border">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
         <div>
-          <p className="text-sm font-medium tracking-[0.16em] text-copper uppercase">Contact</p>
+          <SectionLabel>contact</SectionLabel>
           <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Start a conversation.</h2>
           <p className="mt-4 text-muted-foreground">
             Email is the direct route. The form prepares a message in your own email app.

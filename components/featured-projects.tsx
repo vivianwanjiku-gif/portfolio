@@ -3,6 +3,7 @@ import type { LucideIcon } from "lucide-react"
 import { formatUpdated } from "@/lib/format"
 import { languageColor, languageEntries } from "@/lib/projects"
 import type { FeaturedCard } from "@/lib/types"
+import { SectionLabel } from "@/components/section-label"
 import { Badge } from "@/components/ui/badge"
 
 const icons: Record<string, LucideIcon> = {
@@ -18,7 +19,7 @@ export function FeaturedProjects({ projects }: { projects: FeaturedCard[] }) {
   return (
     <section id="work" className="border-t border-border">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="text-sm font-medium tracking-[0.16em] text-copper uppercase">Selected work</p>
+        <SectionLabel>work</SectionLabel>
         <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Featured projects</h2>
         <p className="mt-4 max-w-2xl text-muted-foreground">
           SkyLink Aviation and TapNet Network lead the list. The other cards are original repositories with a README

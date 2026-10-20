@@ -1,3 +1,4 @@
+import { SectionLabel } from "@/components/section-label"
 import { site, isShown } from "@/content/site"
 import type { GithubProfile } from "@/lib/types"
 
@@ -15,7 +16,7 @@ export function About({ profile }: { profile?: GithubProfile }) {
     <section id="about" className="border-t border-border">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[minmax(0,1.4fr)_minmax(240px,0.7fr)]">
         <div>
-          <p className="text-sm font-medium tracking-[0.16em] text-copper uppercase">About</p>
+          <SectionLabel>about</SectionLabel>
           <h2 className="mt-3 font-serif text-4xl tracking-tight sm:text-5xl">Work that is public, and only that.</h2>
           <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
             {site.about.map((paragraph) => (

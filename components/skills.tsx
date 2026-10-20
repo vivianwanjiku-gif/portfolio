@@ -1,3 +1,4 @@
+import { SectionLabel } from "@/components/section-label"
 import { site } from "@/content/site"
 import { languageColor, primaryLanguageCounts } from "@/lib/projects"
 import type { Repo } from "@/lib/types"
@@ -9,7 +10,7 @@ export function Skills({ repos }: { repos: Repo[] }) {
   return (
     <section id="skills" className="border-t border-border bg-muted/40">
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
-        <p className="text-sm font-medium tracking-[0.16em] text-copper uppercase">Skills</p>
+        <SectionLabel>skills</SectionLabel>
         <h2 className="mt-3 max-w-2xl font-serif text-4xl tracking-tight sm:text-5xl">
           Languages from the public repositories.
         </h2>
