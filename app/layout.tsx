@@ -3,6 +3,7 @@ import { Figtree, Geist_Mono, Newsreader } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { site } from "@/content/site"
 import { getSiteUrl } from "@/lib/site-url"
+import { themeBootScript } from "@/lib/theme-script"
 import "./globals.css"
 
 const sans = Figtree({
@@ -87,8 +88,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sans.variable} ${serif.variable} ${mono.variable} h-full antialiased`}
+      className={`${sans.variable} ${serif.variable} ${mono.variable} dark h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBootScript }} />
+      </head>
       <body className="min-h-full bg-background text-foreground">
         <ThemeProvider>
           {children}

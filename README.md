@@ -7,7 +7,7 @@ Portfolio site for Vivian Wanjiku, a software developer in Nairobi. It reads her
 - [Next.js](https://nextjs.org/) (App Router) and React
 - TypeScript
 - Tailwind CSS and [shadcn/ui](https://ui.shadcn.com/)
-- `next-themes` for light and dark mode
+- `next-themes` for light and dark mode, with dark as the default for first-time visitors
 
 The repository list comes from `https://api.github.com/users/vivianwanjiku-gif/repos`. Responses are cached for about an hour. If GitHub is unavailable, the site uses the snapshot in `content/github-fallback.json`.
 
